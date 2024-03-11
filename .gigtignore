@@ -2,3 +2,6 @@ source
 ./source/*
 ./source
 source/*
+./tmp*
+tmp/*
+tmp*
