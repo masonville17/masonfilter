@@ -33,11 +33,20 @@ usage: ./masonvideofilter.sh <source_video> <output_filename> [<frame_rate>] [<r
 It's kind of fun to take a large set of ordinary images, and run this against them all, you never know what might come out!
 
 ###### example: 
-`./masonvideofilter.sh ./sourcevid.mp4 /home/user/destdir/output.mp4 60 1920x1080` will split ecach vido second into 60 frames, will resize and calculate against those frames in tmp dir in cwd, will form these back  into video of same framerate.
+`./masonvideofilter.sh ./sourcevid.mp4 output 60 1920x1080` will split ecach vido second into 60 frames, will resize and calculate against those frames in tmp dir in cwd, will form these back  into video of same framerate.
 
-`./masonvideofilter.sh sampelvideo.mp4 out.mp4` will work as above, but will default to 30fps, won't resize images before calculation (slower)
+`./masonvideofilter.sh samplevideo.mp4 output` will work as above, but will default to 30fps, won't resize images before calculation (slower), to output.mp4
+
+#todo- split audio channel and add back in
 
 ----
+Video example
+
+>[Boring Rollercoaster](https://github.com/masonville17/masonfilter/raw/main/samplevideo.mp4)
+>
+>[Enhanced Rollercoaster](https://github.com/masonville17/masonfilter/raw/main/output.mp4)
+
+Photo example
 
 >ordinary horse
 >![ordinary horse](./examples/00001.jpg)
