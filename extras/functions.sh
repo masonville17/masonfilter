@@ -46,3 +46,4 @@ strip_and_splice_audio() {
     ffmpeg -i "$output_file" -i "$audio_file" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest "output_with_audio.mp4"
     rm "$audio_file"
 }
+
