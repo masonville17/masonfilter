@@ -38,6 +38,7 @@ overlay_images() {
     done
 }
 
+
 strip_and_splice_audio() {
     local input_file=$1
     local output_file=$2
