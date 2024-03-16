@@ -19,3 +19,30 @@ split_video_to_images() {
 
     ffmpeg -i "$input_video_name" -vf fps="$frame_rate" "$output_images_name%04d.png"
 }
+
+overlay_images() {
+    local overlayfolder=$1
+    local basefolder=$2
+    local opacity=$3
+    local outputdir=$4
+    for file1 in "$overlayfolder"/*.{jpg,jpeg,png,gif}; do
+        filename=$(basename "$file1")
+        file2="$basefolder/$filename"
+        if [ -f "$file2" ]; then
+            convert "$file1" "$file2" -gravity SouthWest -compose over -alpha "$opacity" -composite \
+                    -pointsize 36 -fill white -annotate +20+20 "$filename" \
+                    "$outputdir/$filename"
+        else
+            echo "Corresponding file not found for $filename"
+        fi
+    done
+}
+
+strip_and_splice_audio() {
+    local input_file=$1
+    local output_file=$2
+    local audio_file="temp_audio.aac"
+    ffmpeg -i "$input_file" -vn -acodec copy "$audio_file"
+    ffmpeg -i "$output_file" -i "$audio_file" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest "output_with_audio.mp4"
+    rm "$audio_file"
+}

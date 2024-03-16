@@ -29,6 +29,7 @@ usage: ./masonvideofilter.sh <source_video> <output_filename> [<frame_rate>] [<r
 - 2nd argument is for the filename (sans-extension) that you would like to put this out to
 - 3rd (optional) argument is for framerate (defauts to 30)
 - 4th (optional) argument is for resize video dimsensions, in widthxheight
+- 5th (optional) argument is for filter overlay opacity, (defaults to 0.5; 0=no filter opacity, 1=full filter opacity)
   
 It's kind of fun to take a large set of ordinary images, and run this against them all, you never know what might come out!
 
