@@ -43,9 +43,9 @@ It's kind of fun to take a large set of ordinary images, and run this against th
 ----
 Video example
 
->[Boring Rollercoaster](https://github.com/masonville17/masonfilter/raw/main/samplevideo.mp4)
+>[Boring Rollercoaster](https://www.pexels.com/video/a-bullet-train-traveling-fast-above-the-rail-tracks-3273637/)
 >
->[Enhanced Rollercoaster](https://github.com/masonville17/masonfilter/raw/main/output.mp4)
+>[Enhanced Rollercoaster](https://www.youtube.com/watch?v=GPbckBroXQg)
 
 Photo example
 
